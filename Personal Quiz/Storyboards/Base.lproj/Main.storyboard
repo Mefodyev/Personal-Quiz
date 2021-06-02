@@ -97,20 +97,29 @@
                                         <rect key="frame" x="117" y="0.0" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
                                         <connections>
-                                            <action selector="singleAnswerButtonPressed:" destination="jAp-U9-pn4" eventType="touchUpInside" id="rZh-zR-hFp"/>
+                                            <action selector="singleAnswerButtonTapped:" destination="jAp-U9-pn4" eventType="touchUpInside" id="gkS-hP-YbR"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQu-7m-kST">
                                         <rect key="frame" x="117" y="46" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonTapped:" destination="jAp-U9-pn4" eventType="touchUpInside" id="2Cl-7M-I7n"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="35k-Ef-9KE">
                                         <rect key="frame" x="117" y="92" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonTapped:" destination="jAp-U9-pn4" eventType="touchUpInside" id="XhC-WX-sBD"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ncN-r4-v9q">
                                         <rect key="frame" x="117" y="138" width="46" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonTapped:" destination="jAp-U9-pn4" eventType="touchUpInside" id="bKM-6D-EQm"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>

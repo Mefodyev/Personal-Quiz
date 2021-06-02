@@ -14,25 +14,27 @@ class ResultViewController: UIViewController {
     // 3. Отобразить результат
     // 4. Избавиться от кнопки Back
     
+    //MARK: Variables
     var answers: [Answer] = []
     
+    //MARK: Outlets
     @IBOutlet weak var typeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
 
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //Выводит в консоль массив ответов
         print(answers)
+        //Отображают на экране посчитанные функцией animalTypeFinder() значения
         typeLabel.text = "Вы - \(animalTypeFinder().rawValue)"
         descriptionLabel.text = "\(animalTypeFinder().definition)"
-        
     }
-    
-    let a = [Personal_Quiz.Answer(text: "Стейк", type: Personal_Quiz.AnimalType.dog), Personal_Quiz.Answer(text: "Плавать", type: Personal_Quiz.AnimalType.turtle), Personal_Quiz.Answer(text: "Обниматься", type: Personal_Quiz.AnimalType.rabbit), Personal_Quiz.Answer(text: "Есть", type: Personal_Quiz.AnimalType.dog), Personal_Quiz.Answer(text: "Нервничаю", type: Personal_Quiz.AnimalType.rabbit)]
-    
+}
+
+//MARK: Local Extensions
+
+extension ResultViewController {
     private func animalTypeFinder() -> AnimalType {
         
         var resultedAnimal = AnimalType(rawValue: "L")
@@ -67,6 +69,14 @@ class ResultViewController: UIViewController {
         
         print(newSortedArray[0])
         
+        //Функция - рандомайзер, если какие-то животные в отсортированном массиве у юзера имеют одинаковый вес, всё решает Его Величество Рандом
+        if newSortedArray[0] == newSortedArray[1] {
+            newSortedArray[0] = newSortedArray[Int.random(in: 0...1)]
+        } else if newSortedArray[0] == newSortedArray[1] && newSortedArray[1] == newSortedArray[2] {
+            newSortedArray[0] = newSortedArray[Int.random(in: 0...2)]
+        }
+
+        print("Updated first point position is \(newSortedArray[0])")
 
         
         switch newSortedArray[0] {
@@ -91,4 +101,5 @@ class ResultViewController: UIViewController {
         
         return resultedAnimal ?? AnimalType.init(rawValue: "L")!
     }
+    
 }
